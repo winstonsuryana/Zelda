@@ -1,11 +1,13 @@
 package com.example.dylanodekirk.zeldaapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -23,14 +25,6 @@ public class UpgradesActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         //list of items
         ArrayList<Item> itemList = new ArrayList<Item>();
@@ -58,6 +52,26 @@ public class UpgradesActivity extends AppCompatActivity {
         mListAdapter = new ListAdapater(UpgradesActivity.this, itemList);
         mItemListView = (ListView) findViewById(R.id.upgradesListView);
         mItemListView.setAdapter(mListAdapter);
+
+
+        mItemListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
+                Item item = (Item) parent.getItemAtPosition(position);
+                Intent i = new Intent(UpgradesActivity.this, DisplayInformationActivity.class);
+
+                i.putExtra("itemName", item.getItemName());
+                i.putExtra("itemPicture", item.getImageSource());
+                i.putExtra("description", item.itemdescription);
+
+
+                startActivity(i);
+            }
+
+        });
+
+
+
     }
 
 }

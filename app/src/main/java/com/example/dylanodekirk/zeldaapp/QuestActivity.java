@@ -27,7 +27,11 @@ public class QuestActivity extends AppCompatActivity {
 
         //create items to be passed to list
         Item item1 = new Item("Vessel of Light", R.mipmap.vesseloflight);
-        Item item2 = new Item("Auru's Memo", R.mipmap.aurusmemo);
+
+        Item item2 = new Item("Auru's Memo", R.mipmap.aurusmemo,
+                "Given to you by Auru after obtaining the Master Sword (After Lakebed Temple). " +
+                        "This item is needed to access the Gerudo Desert and Arbiter's Grounds. ");
+
         Item item3 = new Item("Ashei's Sketch", R.mipmap.asheissketch);
         Item item4 = new Item("Ordon Pumpkim", R.mipmap.ordonpumpkin);
         Item item5 = new Item("Ordon Goat Cheese", R.mipmap.ordongoatcheese);

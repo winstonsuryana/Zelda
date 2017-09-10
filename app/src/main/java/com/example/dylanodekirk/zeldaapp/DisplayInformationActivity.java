@@ -1,7 +1,9 @@
 package com.example.dylanodekirk.zeldaapp;
 
+import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +26,8 @@ public class DisplayInformationActivity extends AppCompatActivity {
         Toolbar toolbarDetails = (Toolbar) findViewById(R.id.toolbarDetails);
         ImageView imagedetails = (ImageView) findViewById(R.id.imagedetails);
         TextView descriptionTextView  = (TextView) findViewById(R.id.itemTextDescription);
+        TextView titleDescriptionTextView = (TextView) findViewById(R.id.textViewInformation);
+
 
 
         Bundle extras = getIntent().getExtras();
@@ -32,7 +36,9 @@ public class DisplayInformationActivity extends AppCompatActivity {
         String desc = extras.getString("description");
 
         Log.d(TAG, "onCreate: " + itemName + imageSource);
-        toolbarDetails.setTitle(itemName);
+//        toolbarDetails.setTitle("abc");
+        titleDescriptionTextView.setText(itemName);
+        toolbarDetails.setTitleTextColor(Color.WHITE);
         imagedetails.setImageResource(imageSource);
         if(! (desc.compareTo("") == 0)){
             descriptionTextView.setText(desc);
