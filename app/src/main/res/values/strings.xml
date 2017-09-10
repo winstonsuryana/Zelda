@@ -101,4 +101,5 @@
     <string name="title_activity_dungeon_items">DungeonItemsActivity</string>
     <string name="title_activity_quest">QuestActivity</string>
     <string name="title_activity_inventory">InventoryActivity</string>
+    <string name="title_activity_display_information">DisplayInformationActivity</string>
 </resources>
