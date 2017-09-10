@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/equipment"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Equipment" />
+        <item
+            android:id="@+id/upgrades"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Upgrades" />
+        <item
+            android:id="@+id/collectable"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Collectable" />
+        <item
+            android:id="@+id/bottleitems"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Bottle Items" />
+        <item
+            android:id="@+id/dungeonitems"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Dungeon Items" />
+        <item
+            android:id="@+id/questactivity"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Quest Activity" />
+        <item
+            android:id="@+id/inventoryactivity"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Inventory Activity" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
